@@ -29,7 +29,11 @@
   Call your class Employee and receive all the data in the constructor in the order listed above.
 */
 
-//Code Here
+class Employee{
+   constructor(){
+   
+   }
+}
 
 
 
