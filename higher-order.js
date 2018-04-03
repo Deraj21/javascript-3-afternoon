@@ -132,5 +132,3 @@ let bobsTotal = purchases.reduce((total, purchase) => {
   }
   return total;
 }, 0);
-
-
