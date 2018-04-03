@@ -54,8 +54,8 @@ function greeting( obj ) {
 */
 
 function totalPopulation(obj){
-  let {utah, califonia, texas, arizona} = obj;
-  return utah + califonia + texas + arizona;
+  let {utah, california, texas, arizona} = obj;
+  return utah + california + texas + arizona;
 }
 
 
@@ -70,7 +70,10 @@ function totalPopulation(obj){
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+ingredients = (obj) => {
+  let {carb, fat, protein} = obj;
+  return [carb, fat, protein];
+}
 
 
 
@@ -88,7 +91,9 @@ function totalPopulation(obj){
   Find the smallest number of the three and return that number.
 */
 
-//Code Here
+largeNumbers = ({first, second, third}) => {
+  return first < second ? (first < third ? first : third) : (second < third ? second : third);
+}
 
 
 
@@ -100,6 +105,17 @@ function totalPopulation(obj){
   Find the longest array and return that array.
 */
 
-//Code Here
+let numberGroups = ({a, b, c}) => {
+  if (a.length > b.length){
+    if(a.length > c.length){
+      return a;
+    }
+    return c;
+  }
+  if(b.length > c.length){
+    return b;
+  }
+  return c;
+}
 
 
