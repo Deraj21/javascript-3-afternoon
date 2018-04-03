@@ -77,7 +77,17 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+const removeDuplicates = (arr) => {
+  for (let i = 0; i < arr.length; i++){
+    for (let j = 0; j < arr.length; j++){
+      if (i !== j && arr[i] === arr[j]){ // check to make sure not looking at the same index, then compare
+        //console.log(`removing ${arr[j]} at ${j}.`);
+        arr.splice(j, 1);
+      }
+    }
+  }
+  return arr;
+}
 
 
 
@@ -105,9 +115,8 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 
@@ -147,7 +156,11 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-//Code Here
+function recordCleaner(){
+  myCar.accidents.forEach((val, i, arr) => {
+    val.atFaultForAccident = false;
+  });
+}
 
 
 
@@ -166,6 +179,13 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
-//Code Here
+const looper = () => {
+  numsArr.forEach(list => {
+    list.forEach((num, i, arr) => {
+      arr[i] = num % 2 === 0 ? 'even' : 'odd';
+    });
+  });
+  return numsArr;
+}
 
 
