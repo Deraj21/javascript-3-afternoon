@@ -178,8 +178,12 @@ class Machine{
     this.needs_reboot = true;
   }
   reboot(){
-    this.wear_and_tear_count -= 10;
-    this.needs_reboot = false;
+    let anyMachine = this;
+
+    return function(){
+      anyMachine.wear_and_tear_count -= 10;
+      anyMachine.needs_reboot = true;
+    }
   }
 }
 
